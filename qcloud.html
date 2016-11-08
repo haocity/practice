@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+body {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    font-family: Avenir Next,Helvetica,Arial,Lantinghei SC,Microsoft YaHei,sans-serif;
+}
+
+ul,li {
+    padding: 0;
+    margin: 0;
+}
+
+.nav-warp {
+    position: absolute;
+    height: 64px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+
+.nav-warp2 {
+    height: 0px;
+    position: absolute;
+    width: 100%;
+    background-color: #000;
+    transition: height .3s;
+    -webkit-transition: height .3s;
+ /* Safari */
+    z-index: 4;
+}
+
+.nav {
+    max-width: 1200px;
+    min-width: 320px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: inline-block;
+}
+
+.nav-content {
+    display: inline-block;
+}
+
+.nav-content>li {
+    float: left;
+    color: #fff;
+    list-style: none;
+    padding: 0 10px;
+    font-size: 1em;
+    line-height: 24px;
+}
+
+i {
+    font-style: normal;
+}
+
+.hd-tx {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 500px;
+}
+
+.hd-tx>div {
+    position: absolute;
+    display: none;
+    height: 500px;
+    width: 100%;
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+.hd-kz {
+    position: absolute;
+    width: 40%;
+    height: 10px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 455px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.hd-kz>i {
+    display: inline-block;
+    width: 20px;
+    height: 6px;
+    background: rgba(255,255,255,.3);
+    margin: 0 4px;
+}
+
+.fy {
+    position: absolute;
+    top: 240px;
+    color: #fff;
+    font-size: 60px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 1s;
+    -webkit-transition: opacity 1s;
+ /* Safari */
+}
+
+.hd-x {
+    display: inline-block !important;
+}
+
+#hdnext {
+    right: 20%;
+    font-family: serif;
+}
+
+#hdlast {
+    left: 20%;
+    font-family: serif;
+}
+
+.hd-on {
+    display: inline-block !important;
+    animation: flyon 1s;
+    -webkit-animation: flyon 1s;
+}
+
+@keyframes flyon {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@-webkit-keyframes flyon {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.hd-out {
+    display: inline-block !important;
+    animation: flyout 1s;
+    -webkit-animation: flyout 1s;
+}
+
+@keyframes flyout {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@-webkit-keyframes flyout {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.hd-on2 {
+    display: inline-block !important;
+    animation: flyon2 1s;
+    -webkit-animation: flyon2 1s;
+}
+
+@keyframes flyon2 {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@-webkit-keyframes flyon2 {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.hd-out2 {
+    display: inline-block !important;
+    animation: flyout2 1s;
+    -webkit-animation: flyout2 1s;
+}
+
+@keyframes flyout2 {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(100%);
+    }
+}
+
+@-webkit-keyframes flyout {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(100%);
+    }
+}
+
+.hd-o {
+    background-color: rgba(255,255,255,.8) !important;
+}
+		</style>
+	</head>
+	<body>
+		<div class="nav-warp" id="nav-warp">
+			<div class="nav"> <div class="logo"><h1><a href="http://loliyun.cn"><img src="img/logo.png"></a></h1></div>
+			<ul class="nav-content">
+			<li>云产品</li>
+			<li>解决方案</li>
+			<li>服务市场</li>
+			<li>合作与生态</li>
+			<li>社区和文档</li>
+			</ul>
+			</div>
+		</div>
+		<div class="nav-warp2" id="nav-warp2"></div>
+		<div class="hd-tx" id="hdmain" style='background-image: url(img/1.png)'>
+			<div style='background-image: url(img/1.png)' class="hd-x"><a href="#" ></a></div>
+			<div style='background-image: url(img/2.jpg)'><a href="#"></a></div>
+			<div style='background-image: url(img/3.png)'><a href="#"></a></div>
+			<div style='background-image: url(img/4.jpg)'><a href="#"></a></div>
+			<div style='background-image: url(img/5.png)'><a href="#"></a></div>
+			<i class="fy" id="hdnext">&gt;</i>
+			<i class="fy" id="hdlast">&lt;</i>
+			<i class="hd-kz" id='hd-kz'>
+				<i id="hd0" class='hd-o'></i>
+				<i id="hd1"></i>
+				<i id="hd2"></i>
+				<i id="hd3"></i>
+				<i id="hd4"></i>
+			</i>
+		</div>
+<script type="text/javascript">
+		var hd = new Object;
+hd.m = document.getElementById('hdmain').getElementsByTagName("div");
+hd.n = document.getElementById('hd-kz').getElementsByTagName('i');
+hd.i = '0';
+hd.timeout = function() {
+    return setTimeout(function() {
+        document.getElementById('hdnext').onclick()
+    },
+    5000);
+};
+hd.t = hd.timeout();
+//hdwz();48
+document.getElementById('hdmain').onmouseover = function() {
+    document.getElementById('hdnext').style.opacity = 1;
+    document.getElementById('hdlast').style.opacity = 1;
+}
+document.getElementById('hdmain').onmouseout = function() {
+    document.getElementById('hdnext').style.opacity = 0;
+    document.getElementById('hdlast').style.opacity = 0;
+}
+document.getElementById('nav-warp').onmouseover = function() {
+    document.getElementById('nav-warp2').style.height = '65px';
+}
+document.getElementById('nav-warp').onmouseout = function() {
+    document.getElementById('nav-warp2').style.height = '0px';
+}
+
+hd.n[0].onclick = function() {
+    hdchangenumber(this, 0);
+}
+hd.n[1].onclick = function() {
+    hdchangenumber(this, 1);
+}
+
+hd.n[2].onclick = function() {
+    hdchangenumber(this, 2);
+}
+hd.n[3].onclick = function() {
+    hdchangenumber(this, 3);
+}
+hd.n[4].onclick = function() {
+    hdchangenumber(this, 4);
+}
+function hdchangenumber(id, i) {
+    hdclear();
+    id.className = 'hd-o';
+    if (i > hd.i) {
+        hd.i = i;
+        hdchangerone();
+    }
+    if (i < hd.i) {
+        hd.i = i;
+        hdchangertwo();
+    }
+
+}
+function hdclear() {
+    for (var i = 0; i < hd.m.length; i++) {
+        hd.n[i].className = '';
+    }
+    clearTimeout(hd.t);
+}
+
+document.getElementById('hdlast').onclick = function() {
+    if (hd.i == 0) {
+        hd.i = hd.m.length - 1;
+        console.log(hd.i);
+    } else {
+        hd.i--;
+    }
+    hdchangertwo();
+}
+document.getElementById('hdnext').onclick = function() {
+    console.log('next') if (hd.i == hd.m.length - 1) {
+        hd.i = 0;
+        console.log('i=0');
+        console.log(hd.i);
+    } else {
+        hd.i++;
+    }
+    hdchangerone();
+
+}
+function hdchangerone() {
+
+    var c = hdcheck(hd.i - 1);
+    if (c == hd.i) {
+        console.log('不要点自己')
+    } else {
+        hd.m[c].className = 'hd-out';
+        setTimeout(function() {
+            hd.m[c].className = '';
+        },
+        980);
+        hd.m[hd.i].className = 'hd-on';
+        hdclear();
+        hd.n[hd.i].className = 'hd-o';
+        hd.t = hd.timeout();
+    }
+
+}
+function hdchangertwo() {
+    var c = hdcheck(hd.i + 1);
+    if (c == hd.i) {
+        console.log('不要点自己')
+    } else {
+        hd.m[c].className = 'hd-out2';
+        hd.m[hd.i].className = 'hd-on2';
+        setTimeout(function() {
+            hd.m[c].className = '';
+        },
+        980);
+        hdclear();
+        hd.n[hd.i].className = 'hd-o';
+        hd.t = hd.timeout();
+    }
+
+}
+
+function hdcheck(y) {
+    for (var i = 0; i < hd.m.length; i++) {
+        if (hd.m[i].className == 'hd-on' || hd.m[i].className == 'hd-x' || hd.m[i].className == 'hd-on2') {
+            y = i;
+        }
+
+    };
+    return y;
+
+}
+	</script>
+	
+	</body>
+</html>
